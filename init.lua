@@ -106,11 +106,10 @@ do
   -- NOTE: You can change these options as you wish!
   --  For more options, you can see `:help option-list`
 
-  -- Make line numbers default
+  -- Show absolute and relative line numbers side by side.
   vim.o.number = true
-  -- You can also add relative line numbers, to help with jumping.
-  --  Experiment for yourself to see if you like it!
-  -- vim.o.relativenumber = true
+  vim.o.relativenumber = true
+  vim.o.statuscolumn = [[%C%s%=%{&number && v:virtnum == 0 ? v:lnum . ' ' : ''}%{&relativenumber && v:virtnum == 0 ? printf('%3d ', v:relnum) : ''}]]
 
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
