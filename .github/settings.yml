@@ -1,1 +1,4 @@
 _extends: diogokorok/.github
+
+repository:
+  default_branch: master
